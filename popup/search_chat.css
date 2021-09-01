@@ -1,0 +1,50 @@
+.main {
+	/* flex-flow: column nowrap; */
+	height: max-content;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 550;
+	padding: 10px;
+	color: white;
+}
+
+.label {
+	color: white;
+	display: block;
+	margin: 0 0 5px 0;
+}
+.input {
+	background-color: transparent;
+	color: white;
+	border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	height: 100%;
+	outline: none;
+	text-indent: 5px;
+}
+
+.chat-button {
+	cursor: pointer;
+	display: inline-block;
+	border-style: none;
+	border-radius: 5px;
+	height: 20px;
+}
+.chat-delete-button {
+	cursor: pointer;
+	display: inline-block;
+	border-style: none;
+	border-radius: 5px;
+	height: 20px;
+}
+.chat-delete-button:after {
+	content: 'X';
+}
+.btns-container {
+	margin: 0 0 10px 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+body {
+	background-color: #18181b;
+}

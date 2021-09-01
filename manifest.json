@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "multichat",
+	"description": "provides multichat functionality on twitch",
+	"version": "0.0.1",
+	"icons": {
+		"64": "icons/icon.png"
+	},
+	"permissions": ["tabs"],
+	"browser_action": {
+		"browser_style": true,
+		"default_icon": { "38": "icons/icon.png" },
+		"default_popup": "popup/search_chat.html"
+	},
+	"background": {
+		"scripts": ["background_script.js"],
+		"persistent": true
+	},
+	"content_scripts": [
+		{
+			"run_at": "document_idle",
+			"matches": ["*://*.twitch.tv/*"],
+			"css": ["input.css"],
+			"js": ["content_script.js"]
+		}
+	],
+	"options_ui": {
+		"page": "options/index.html"
+	}
+}
